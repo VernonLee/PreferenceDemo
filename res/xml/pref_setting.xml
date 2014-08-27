@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/setting_title" >
+
+    <!-- wireless & network -->
+    <PreferenceCategory android:title="@string/setting_wireles0network_title" >
+
+        <!-- wifi -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/setting_icon_wifi_64"
+            android:key="@string/setting_wifi_key"
+            android:title="@string/setting_wifi_title" />
+
+        <!-- bluetooth -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/setting_icon_bluetooth_64"
+            android:key="@string/setting_bluetooth_key"
+            android:title="@string/setting_bluetooth_title" />
+
+        <!-- data storge -->
+        <EditTextPreference
+            android:icon="@drawable/setting_icon_datausage_64"
+            android:key="@string/setting_datausage_key"
+            android:title="@string/setting_datausage_title" />
+
+        <!-- nfc & more -->
+        <EditTextPreference
+            android:icon="@drawable/setting_icon_more_64"
+            android:key="@string/setting_nfc_key"
+            android:title="@string/setting_nfc_title" />
+    </PreferenceCategory>
+
+    <!-- device -->
+    <PreferenceCategory android:title="@string/setting_device_title" >
+
+        <!-- sound -->
+        <EditTextPreference
+            android:icon="@drawable/setting_icon_sound_64"
+            android:key="@string/setting_sound_key"
+            android:title="@string/setting_sound_title" />
+
+        <!-- voice -->
+        <EditTextPreference
+            android:icon="@drawable/setting_icon_voice_64"
+            android:key="@string/setting_voice_key"
+            android:title="@string/setting_voice_title" />
+
+        <!-- display -->
+        <EditTextPreference
+            android:icon="@drawable/setting_icon_display_64"
+            android:key="@string/setting_display_key"
+            android:title="@string/setting_display_title" />
+
+        <!-- battery -->
+        <EditTextPreference
+            android:icon="@drawable/setting_icon_battery_64"
+            android:key="@string/setting_battery_key"
+            android:title="@string/setting_battery_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
