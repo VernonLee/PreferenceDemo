@@ -33,4 +33,7 @@
     
     <string name="setting_battery_key">pref_key_battery</string>
     <string name="setting_battery_title">Battery</string>
+    
+    <string name="setting_date_key">pref_key_date</string>
+    <string name="setting_date_title">Date</string>
 </resources>

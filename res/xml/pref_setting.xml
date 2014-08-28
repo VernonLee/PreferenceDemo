@@ -30,6 +30,14 @@
             android:icon="@drawable/setting_icon_more_64"
             android:key="@string/setting_nfc_key"
             android:title="@string/setting_nfc_title" />
+        
+        <MultiSelectListPreference 
+            android:entries="@array/pref_array_date"
+            android:entryValues="@array/pref_array_date"
+            android:icon="@drawable/setting_icon_date_64"
+            android:key="@string/setting_date_key"
+            android:title="@string/setting_date_title"
+            />
     </PreferenceCategory>
 
     <!-- device -->

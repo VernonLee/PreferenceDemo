@@ -1,8 +1,15 @@
 package cn.vernon.preference;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
+import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
@@ -19,8 +26,10 @@ public class SettingActivity extends PreferenceActivity implements OnPreferenceC
 	
 	private String wifiKey;
 	private String blueToothKey;
+	private String dateKey;
 	private CheckBoxPreference cbpWifi; 
 	private CheckBoxPreference cbpBlueTooth;
+	private MultiSelectListPreference mslpDate;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +38,40 @@ public class SettingActivity extends PreferenceActivity implements OnPreferenceC
 		
 		wifiKey = getResources().getString(R.string.setting_wifi_key);
 		blueToothKey = getResources().getString(R.string.setting_bluetooth_key);
+		dateKey = getResources().getString(R.string.setting_date_key);
 		
 		cbpWifi = (CheckBoxPreference)findPreference(wifiKey);
 		cbpWifi.setOnPreferenceClickListener(this);
 		cbpBlueTooth = (CheckBoxPreference)findPreference(blueToothKey);
 		cbpBlueTooth.setOnPreferenceClickListener(this);
+		mslpDate = (MultiSelectListPreference)findPreference(dateKey);
+		
+		// =============日期设置模拟开始=============== //
+		String value = "星期一,星期二,星期三";
+		JSONObject dataJson = null;
+		try {
+			dataJson = new JSONObject();
+			dataJson.put("aeraTime", value);
+
+			Set<String> defaultValue = new HashSet<String>();
+			String jsonValue[] = dataJson.getString("aeraTime").split(",");
+			if (jsonValue != null) {
+				// 设置选中的值
+				for (String temp : jsonValue) {
+					defaultValue.add(temp);
+				}
+				mslpDate.setValues(defaultValue);
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		
+		// 选中的值
+		Set<String> checkedValue = mslpDate.getValues();
+		for(String item : checkedValue) {
+			Log.i("SETTING-CURRENT-DATE",item.toString());
+		}
+		// =============日期设置模拟结束=============== //
 	}
 
 	@Override
