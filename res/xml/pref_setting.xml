@@ -68,4 +68,10 @@
             android:title="@string/setting_battery_title" />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/setting_others">
+        <!-- recover -->
+        <Preference
+            android:key="@string/setting_recover_key"
+            android:title="@string/setting_recover_title" />
+    </PreferenceCategory>
 </PreferenceScreen>

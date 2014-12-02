@@ -36,4 +36,9 @@
     
     <string name="setting_date_key">pref_key_date</string>
     <string name="setting_date_title">Date</string>
+    
+    <string name="setting_others">Others</string>
+    
+    <string name="setting_recover_title">恢复设置</string>
+    <string name="setting_recover_key">pref_key_recover</string>
 </resources>

@@ -27,9 +27,11 @@ public class SettingActivity extends PreferenceActivity implements OnPreferenceC
 	private String wifiKey;
 	private String blueToothKey;
 	private String dateKey;
+	private String recoverKey;
 	private CheckBoxPreference cbpWifi; 
 	private CheckBoxPreference cbpBlueTooth;
 	private MultiSelectListPreference mslpDate;
+	private Preference prefRecover;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +41,15 @@ public class SettingActivity extends PreferenceActivity implements OnPreferenceC
 		wifiKey = getResources().getString(R.string.setting_wifi_key);
 		blueToothKey = getResources().getString(R.string.setting_bluetooth_key);
 		dateKey = getResources().getString(R.string.setting_date_key);
+		recoverKey = getResources().getString(R.string.setting_recover_key);
 		
 		cbpWifi = (CheckBoxPreference)findPreference(wifiKey);
 		cbpWifi.setOnPreferenceClickListener(this);
 		cbpBlueTooth = (CheckBoxPreference)findPreference(blueToothKey);
 		cbpBlueTooth.setOnPreferenceClickListener(this);
 		mslpDate = (MultiSelectListPreference)findPreference(dateKey);
+		prefRecover = (Preference) findPreference(recoverKey);
+		prefRecover.setOnPreferenceClickListener(this);
 		
 		// =============日期设置模拟开始=============== //
 		String value = "星期一,星期二,星期三";
@@ -96,6 +101,8 @@ public class SettingActivity extends PreferenceActivity implements OnPreferenceC
 			} else {
 				showToast("蓝牙已关闭");
 			}
+		} else if(preferenceKey.equals(recoverKey)) {
+			showToast("recovered");
 		}
 		
 		return true;
