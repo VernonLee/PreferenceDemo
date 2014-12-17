@@ -41,4 +41,24 @@
     
     <string name="setting_recover_title">恢复设置</string>
     <string name="setting_recover_key">pref_key_recover</string>
+    
+      <string name="pref_key_huanqi_setting">pref_key_huanqi_setting</string>
+    <string name="pref_key_huanqi_time">pref_key_huanqi_time</string>
+    
+    <string name="pref_key_smartlink_setting">pref_key_smartlink_setting</string>
+    <string name="pref_key_smartlink_zaoju_open">pref_key_smartlink_zaoju_open</string>
+    <string name="pref_key_smartlink_yanji_level">pref_key_smartlink_yanji_level</string>
+    <string name="pref_key_smartlink_zaoju_close">pref_key_smartlink_zaoju_close</string>
+    <string name="pref_key_smartlink_yanjin_fengliang">pref_key_smartlink_yanji_fengliang</string>
+    
+    <string name="pref_key_other_setting">pref_key_other_setting</string>
+    <string name="pref_key_other_yanji_check_safe">pref_key_other_yanji_check_safe</string>
+    <string name="pref_key_other_yanji_protect_record">pref_key_other_yanji_protect_record</string>
+    <string name="pref_key_other_yanji_someone_call">pref_key_other_yanji_protect_record</string>
+    
+    <string name="pref_key_tips_and_share_setting">pref_key_tips_and_share_setting</string>
+    <string name="pref_key_tips_and_share_dinner">pref_key_tips_and_share_dinner</string>
+    <string name="pref_key_tips_and_share_dinner_content">pref_key_tips_and_share_dinner_content</string>
+    <string name="pref_key_tips_and_share_use_message">pref_key_tips_and_share_use_message</string>
+    <string name="pref_key_tips_and_share_close_fire">pref_key_tips_and_share_close_fire</string>
 </resources>

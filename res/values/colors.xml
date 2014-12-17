@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="selected_blue">#00A7CE</color>
+    
+    <drawable name="more_item_clicked">#fccc</drawable>
+     <drawable name="more_item_normal">#0fff</drawable>
+</resources>
